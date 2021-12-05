@@ -27,7 +27,25 @@
 .App-link {
   color: #61dafb;
 }
+.containerTarget{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+}
+.childOfContainer{
+  margin-left: 10px;
+}
+.containerOfTokens{
+  display: flex;
+  justify-content: center;
+}
+hr{
+  margin: 10px;
+}
+.colToken{
+  margin: 20px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
