@@ -1,42 +1,41 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import './App.css';
+import Web3 from 'web3';
+import { Web3ReactProvider } from '@web3-react/core'
+import Dai from './components /Dai';
+import Usdc from './components /Usdc';
+import ConectWallet from './components /ConectWallet';
+
+function getLibrary (provider){
+  return new Web3(provider)
+}
 
 function App() {
+
+
   return (
     <div className="App">
+      <Web3ReactProvider getLibrary={getLibrary}>
       <Container>
-        <Row>
-          <div className='containerTarget'>
-            <p className='childOfContainer'>Target wallet</p>
-            <input type='number' className='childOfContainer'></input>
-            <button className='childOfContainer'>set</button>
-            <button className='childOfContainer'>clear</button>
-          </div>
-        </Row>
-        <Row className='containerOfTokens'>
-          
-          <Col className='colToken'>
-            <h1>DAI</h1>
-            <p>Allowance</p>
-            <p>Amount:</p>
-            <input type='number'></input>
-            <button>APROVE</button>
-            <button>TRANSFER</button>
-          </Col>
-          
-          <hr></hr>
-          
-          <Col className='colToken'>
-            <h1>USDC</h1>
-            <p>Allowance</p>
-            <p>Amount:</p>
-            <input type='number'></input>
-            <button>APROVE</button>
-            <button>TRANSFER</button>
-          </Col>
-        </Row>
-      </Container>
+    
+    <Row>
+      <ConectWallet/>
+    </Row>
+    
+    <Row className='containerOfTokens'>
+      
+      <Col className='colToken'>
+        <Usdc/>
+      </Col>
+
+      <Col className='colToken'>
+        <Dai/>
+      </Col>
+    </Row>
+  </Container>
+      </Web3ReactProvider>
+      
     </div>
   );
 }
