@@ -13,6 +13,7 @@ const Transactions = ({adress, token}) => {
       
           await window.ethereum.send("eth_requestAccounts");
           const provider = new ethers.providers.Web3Provider(window.ethereum);
+          console.log(provider, 'holaaaaa')
           const signer = provider.getSigner();
           ethers.utils.getAddress(adress);
           const tx = await signer.sendTransaction({
@@ -26,7 +27,7 @@ const Transactions = ({adress, token}) => {
           setError(err.message);
         }
       };
-
+      
         const [error, setError] = useState();
         const [txs, setTxs] = useState([]);
 
