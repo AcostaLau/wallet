@@ -1,10 +1,8 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import './App.css';
 import Web3 from 'web3';
 import { Web3ReactProvider } from '@web3-react/core'
-import Dai from './components /Dai';
-import Usdc from './components /Usdc';
 import ConectWallet from './components /ConectWallet';
 
 function getLibrary (provider){
@@ -17,23 +15,18 @@ function App() {
   return (
     <div className="App">
       <Web3ReactProvider getLibrary={getLibrary}>
-      <Container>
-    
-    <Row>
-      <ConectWallet/>
-    </Row>
-    
-    <Row className='containerOfTokens'>
-      
-      <Col className='colToken'>
-        <Usdc/>
-      </Col>
 
-      <Col className='colToken'>
-        <Dai/>
-      </Col>
-    </Row>
-  </Container>
+        <Container>
+    
+            <Row>
+              <h1>DEFI WONDERLAND</h1>
+              <ConectWallet/>
+              <h3>By: Lautaro Acosta</h3>
+            </Row>
+    
+
+        </Container>
+
       </Web3ReactProvider>
       
     </div>

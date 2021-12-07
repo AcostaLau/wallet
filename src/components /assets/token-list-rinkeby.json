@@ -11,16 +11,11 @@
     "symbol": "ETH",
     "decimals": 18
   },
+  
   {
-    "name": "Wrapped Ether",
-    "address": "0xc778417E063141139Fce010982780140Aa0cD5Ab",
-    "symbol": "WETH",
-    "decimals": 18
-  },
-  {
-    "name": "Ethereum Arbitration Service",
-    "address": "0xe9fB56E32743f66ed2859c66E4D9A94657Fce17B",
-    "symbol": "EAR",
-    "decimals": 18
+    "name": "USDCoin",
+    "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "symbol": "USDC",
+    "decimals": 6
   }
 ]
