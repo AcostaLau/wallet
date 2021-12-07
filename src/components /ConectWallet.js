@@ -4,16 +4,17 @@ import React from 'react'
 import ListOfTokens from './listOfTokens/ListOfTokens'
 
 const ConectWallet = () => {
+
+    //chains of web3, im this case  RINKEBY is 4
     const injected = new InjectedConnector({
         supportedChainIds: [1, 3, 4, 5, 42],
     })
     
 
+    
     const { active , account,  activate, deactivate} = useWeb3React()
 
     
-
-
 
     //CONNECT TO WALLET 
     async function connect(){
