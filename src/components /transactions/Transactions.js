@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 
 
-const Transactions = ({adress}) => {
+const Transactions = ({adress, token}) => {
 
     const startPayment = async ({ setError, setTxs, ether}) => {
         try {
@@ -47,7 +47,7 @@ const Transactions = ({adress}) => {
             <form  onSubmit={handleSubmit}>
               <div >
                 <main >
-                  <h1>Send ETH payment</h1>
+                  <h1>Send {token} payment</h1>
                     
                     <div >
                       <div>
@@ -62,7 +62,7 @@ const Transactions = ({adress}) => {
                         <input
                           name="ether"
                           type="text"
-                          placeholder="Amount in ETH"
+                          placeholder= {`Amount in ${token}`}
                         />
                       </div>
                     </div>

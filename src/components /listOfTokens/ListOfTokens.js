@@ -29,7 +29,7 @@ const ListOfTokens = ({adress}) => {
                     <h3><b>BALANCE:</b></h3>{balance}
                 </div>
 
-                <Transactions adress = {adress}/>
+                <Transactions adress = {adress} token={selectedToken.name}/>
         </div>
     )
 }
